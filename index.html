@@ -126,7 +126,7 @@
   const allMapBody = document.getElementById('allMapBody');
 
   // Keep Excel-like parameter order
-  const PARAM_ORDER = ['Platform','Generation','Model', ...(DATA.paramOrder || [])];
+  const PARAM_ORDER = ['Segment','Generation','Model', ...(DATA.paramOrder || [])];
 
   function escapeHtml(s){
     return String(s)
@@ -139,7 +139,7 @@
 
   function getVal(cpu, key){
     if (!cpu) return '';
-    if (key === 'Platform') return cpu.platform || '';
+	  if (key === 'Segment') return cpu.platform || '';
     if (key === 'Generation') return cpu.generation || '';
     if (key === 'Model') return cpu.model || '';
     return (cpu.specs && cpu.specs[key]) ? cpu.specs[key] : '';
@@ -160,45 +160,10 @@
   // Build display labels; de-duplicate identical labels by suffixing (2), (3)...
 const labelCounter = {};
 
-<select id="platformSelect">
-  <option value="desktop">Desktop</option>
-  <option value="mobile">Mobile</option>
-</select>
 
-<select id="intelSelect"></select>
-<select id="amdSelect"></select>
-function getFilteredProcessors(brand, segment) {
-  return processors.filter(p =>
-    p.brand === brand && p.segment === segment
-  );
-}
-	function populateDropdowns() {
-  const platform = document.getElementById("platformSelect").value;
 
-  const intelSelect = document.getElementById("intelSelect");
-  const amdSelect = document.getElementById("amdSelect");
 
-  intelSelect.innerHTML = "";
-  amdSelect.innerHTML = "";
-
-  getFilteredProcessors("Intel", platform).forEach(cpu => {
-    const opt = document.createElement("option");
-    opt.value = cpu.name;
-    opt.textContent = cpu.name;
-    intelSelect.appendChild(opt);
-  });
-
-  getFilteredProcessors("AMD", platform).forEach(cpu => {
-    const opt = document.createElement("option");
-    opt.value = cpu.name;
-    opt.textContent = cpu.name;
-    amdSelect.appendChild(opt);
-  });
-}
-document
-  .getElementById("platformSelect")
-  .addEventListener("change", populateDropdowns);
-
+	
 // Initial load
 populateDropdowns();
 
