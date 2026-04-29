@@ -72,7 +72,11 @@
         <select id="intelSelect"></select>
       </div>
 
-      <button onclick="downloadSelectedPdf()">Download selected comparison</button>
+     
+<button id="pdfBtn" onclick="downloadSelectedPdf()" style="display:none;">
+  Download selected comparison
+</button>
+
     </div>
 
     <div class="card">
@@ -139,24 +143,24 @@
         "specs":{"NPU":"NO","Multithreaded Cores":"2 Cores","Efficiency Cores":"8 Cores","Low Power Efficient Core":"-","Threads":"12 Threads","Base Frequency":"P:1.4GHz\nE:0.9 GHz","Cache Memory":"12MB","Graphics":"Intel® Graphics","Graphics Frequency":"1.3 GHz","Processor Technology":"Intel 7 (10nm)","TDP":"15W - 55W"}},
 
       {"id":"amd__b6__c1__Ryzen_3_8300G","segment":"Desktop","vendor":"AMD","platform":"","generation":"8000-Series","model":"Ryzen™ 3 8300G","block":6,"col":1,
-        "specs":{"Multithreaded Cores":"4 Cores","Efficient Cores":"","Threads":"8 Threads","Base Frequency":"3.4 GHz","Cache Memory":"12MB","Graphics":"Radeon™ 740M","Graphics Frequency":"2.6 GHz","AI Capabilities":"","Processor Technology":"TSMC 4nm FinFET","TDP":"65W"}},
+        "specs":{"Multithreaded Cores":"4 Cores","Efficiency Cores":"","Threads":"8 Threads","Base Frequency":"3.4 GHz","Cache Memory":"12MB","Graphics":"Radeon™ 740M","Graphics Frequency":"2.6 GHz","AI Capabilities":"","Processor Technology":"TSMC 4nm FinFET","TDP":"65W"}},
       {"id":"intel__b6__c2__Core_i3_14100","segment":"Desktop","vendor":"Intel","platform":"","generation":"14th Gen","model":"Core™ i3-14100","block":6,"col":2,
-        "specs":{"Multithreaded Cores":"4 Core","Efficient Cores":"","Threads":"8 Threads","Base Frequency":"3.5 GHz","Cache Memory":"12 MB","Graphics":"Intel® UHD 730 Graphics","Graphics Frequency":"1.5 GHz","AI Capabilities":"","Processor Technology":"Intel 7 (10nm)","TDP":"60W - 154W"}},
+        "specs":{"Multithreaded Cores":"4 Core","Efficiency Cores":"","Threads":"8 Threads","Base Frequency":"3.5 GHz","Cache Memory":"12 MB","Graphics":"Intel® UHD 730 Graphics","Graphics Frequency":"1.5 GHz","AI Capabilities":"","Processor Technology":"Intel 7 (10nm)","TDP":"60W - 154W"}},
 
       {"id":"amd__b8__c1__Ryzen_5_8500G","segment":"Desktop","vendor":"AMD","platform":"","generation":"8000-Series","model":"Ryzen™ 5 8500G","block":8,"col":1,
-        "specs":{"Multithreaded Cores":"6 Cores","Efficient Cores":"Not Applicable","Threads":"12 Threads","Base Frequency":"3.5 GHz","Cache Memory":"22MB","Graphics":"Radeon™ 740M","Graphics Frequency":"2.8 GHz","AI Capabilities":"","Processor Technology":"TSMC 4nm FinFET","TDP":"65W"}},
+        "specs":{"Multithreaded Cores":"6 Cores","Efficiency Cores":"Not Applicable","Threads":"12 Threads","Base Frequency":"3.5 GHz","Cache Memory":"22MB","Graphics":"Radeon™ 740M","Graphics Frequency":"2.8 GHz","AI Capabilities":"","Processor Technology":"TSMC 4nm FinFET","TDP":"65W"}},
       {"id":"intel__b8__c2__Core_i5_14600","segment":"Desktop","vendor":"Intel","platform":"","generation":"14th Gen","model":"Core™ i5-14600","block":8,"col":2,
-        "specs":{"Multithreaded Cores":"6 Core","Efficient Cores":"8 Core","Threads":"20 Threads","Base Frequency":"P – 2.7 GHz\nE - 2.0 GHz","Cache Memory":"24 MB","Graphics":"Intel® UHD 770 Graphics","Graphics Frequency":"1.55 GHz","AI Capabilities":"","Processor Technology":"Intel 7 (10nm)","TDP":"60W - 154W"}},
+        "specs":{"Multithreaded Cores":"6 Core","Efficiency Cores":"8 Core","Threads":"20 Threads","Base Frequency":"P – 2.7 GHz\nE - 2.0 GHz","Cache Memory":"24 MB","Graphics":"Intel® UHD 770 Graphics","Graphics Frequency":"1.55 GHz","AI Capabilities":"","Processor Technology":"Intel 7 (10nm)","TDP":"60W - 154W"}},
 
       {"id":"amd__b9__c1__Ryzen_5_8600G","segment":"Desktop","vendor":"AMD","platform":"","generation":"8000-Series","model":"Ryzen™ 5 8600G","block":9,"col":1,
-        "specs":{"Multithreaded Cores":"6 Cores","Efficient Cores":"Not Applicable","Threads":"12 Threads","Base Frequency":"4.3 GHz","Cache Memory":"22MB","Graphics":"Radeon™ 760M","Graphics Frequency":"2.8 GHz","AI Capabilities":"16 TOPS","Processor Technology":"TSMC 4nm FinFET","TDP":"45-65W"}},
+        "specs":{"Multithreaded Cores":"6 Cores","Efficiency Cores":"Not Applicable","Threads":"12 Threads","Base Frequency":"4.3 GHz","Cache Memory":"22MB","Graphics":"Radeon™ 760M","Graphics Frequency":"2.8 GHz","AI Capabilities":"16 TOPS","Processor Technology":"TSMC 4nm FinFET","TDP":"45-65W"}},
       {"id":"intel__b9__c2__Core_Ultra_5_235","segment":"Desktop","vendor":"Intel","platform":"","generation":"Arrow Lake","model":"Core™ Ultra 5 235","block":9,"col":2,
-        "specs":{"Multithreaded Cores":"6 Core","Efficient Cores":"8 Core","Threads":"14 Threads","Base Frequency":"P – 3.4 GHz\nE - 2.9 GHz","Cache Memory":"24 MB","Graphics":"Intel® Graphics","Graphics Frequency":"2.0 GHz","AI Capabilities":"13 TOPS","Processor Technology":"TSMC N3B","TDP":"60W – 121W"}},
+        "specs":{"Multithreaded Cores":"6 Core","Efficiency Cores":"8 Core","Threads":"14 Threads","Base Frequency":"P – 3.4 GHz\nE - 2.9 GHz","Cache Memory":"24 MB","Graphics":"Intel® Graphics","Graphics Frequency":"2.0 GHz","AI Capabilities":"13 TOPS","Processor Technology":"TSMC N3B","TDP":"60W – 121W"}},
 
       {"id":"amd__b10__c1__Ryzen_7_8700G","segment":"Desktop","vendor":"AMD","platform":"","generation":"8000-Series","model":"Ryzen™ 7 8700G","block":10,"col":1,
-        "specs":{"Multithreaded Cores":"8 Cores","Efficient Cores":"Not Applicable","Threads":"16 Threads","Base Frequency":"4.2 GHz","Cache Memory":"24MB","Graphics":"Radeon™ 780M","Graphics Frequency":"2.9 GHz","AI Capabilities":"16 TOPS","Processor Technology":"TSMC 4nm FinFET","TDP":"45-65W"}},
+        "specs":{"Multithreaded Cores":"8 Cores","Efficiency Cores":"Not Applicable","Threads":"16 Threads","Base Frequency":"4.2 GHz","Cache Memory":"24MB","Graphics":"Radeon™ 780M","Graphics Frequency":"2.9 GHz","AI Capabilities":"16 TOPS","Processor Technology":"TSMC 4nm FinFET","TDP":"45-65W"}},
       {"id":"intel__b10__c2__Core_Ultra_7_265","segment":"Desktop","vendor":"Intel","platform":"","generation":"Arrow Lake","model":"Core™ Ultra 7 265","block":10,"col":2,
-        "specs":{"Multithreaded Cores":"8 Core","Efficient Cores":"12 Core","Threads":"20 Threads","Base Frequency":"P – 2.4 GHz\nE – 1.8 GHz","Cache Memory":"30 MB","Graphics":"Intel® Graphics","Graphics Frequency":"1.95 GHz","AI Capabilities":"13 TOPS","Processor Technology":"TSMC N3B","TDP":"60W – 182W"}}
+        "specs":{"Multithreaded Cores":"8 Core","Efficiency Cores":"12 Core","Threads":"20 Threads","Base Frequency":"P – 2.4 GHz\nE – 1.8 GHz","Cache Memory":"30 MB","Graphics":"Intel® Graphics","Graphics Frequency":"1.95 GHz","AI Capabilities":"13 TOPS","Processor Technology":"TSMC N3B","TDP":"60W – 182W"}}
     ],
 	
 	
@@ -178,161 +182,275 @@
       "intel__b10__c2__Core_Ultra_7_265": ["amd__b10__c1__Ryzen_7_8700G"]
     },
 
-    
-paramOrder: [
-      "NPU",
-      "Multithreaded Cores",
-      "Efficiency Cores",
-      "Low Power Efficient Core",
-      "Threads",
-      "Base Frequency",
-      "Cache Memory",
-      "Graphics",
-      "Graphics Frequency",
-      "Processor Technology",
-      "TDP",
-      "Efficient Cores",
-      "AI Capabilities"
-    ]
-  };
+ paramOrder: [
+    "NPU",
+    "Multithreaded Cores",
+    "Efficiency Cores",
+    "Low Power Efficient Core",
+    "Threads",
+    "Base Frequency",
+    "Cache Memory",
+    "Graphics",
+    "Graphics Frequency",
+    "Processor Technology",
+    "TDP",
+    "AI Capabilities"
+  ]
+};
 
-  // ✅ Debug AFTER DATA is defined
-  console.log("Total CPUs:", DATA.cpus.length);
-  console.log("Total Intel CPUs:", DATA.cpus.filter(c => c.vendor === "Intel").length);
-  console.log("Intel segments:", [...new Set(DATA.cpus.filter(c => c.vendor === "Intel").map(c => c.segment))]);
+// ✅ Debug (AFTER DATA is defined)
+console.log("Total CPUs:", DATA.cpus.length);
+console.log("Total Intel CPUs:", DATA.cpus.filter(c => c.vendor === "Intel").length);
+console.log("Intel segments:", [...new Set(DATA.cpus.filter(c => c.vendor === "Intel").map(c => c.segment))]);
 
-  // =========================
-  // APP LOGIC
-  // =========================
-  const cpuById = Object.fromEntries(DATA.cpus.map(c => [c.id, c]));
+/* =========================
+   APP LOGIC
+   ========================= */
 
-  const segmentSelect = document.getElementById("segmentSelect");
-  const intelSelect   = document.getElementById("intelSelect");
-  const countPill     = document.getElementById("countPill");
+// Maps
+const cpuById = Object.fromEntries(DATA.cpus.map(c => [c.id, c]));
 
-  const thead   = document.getElementById("thead");
-  const tbody   = document.getElementById("tbody");
-  const amdMeta = document.getElementById("amdMeta");
+// DOM
+const segmentSelect = document.getElementById("segmentSelect");
+const intelSelect   = document.getElementById("intelSelect");
+const countPill     = document.getElementById("countPill");
 
-  const PARAM_ORDER = ["Segment", "Platform", "Generation", "Model", ...(DATA.paramOrder || [])];
+const thead   = document.getElementById("thead");
+const tbody   = document.getElementById("tbody");
+const amdMeta = document.getElementById("amdMeta");
 
-  function escapeHtml(s){
-    return String(s ?? "")
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#39;");
-  }
+// Option B: Hide PDF button until Intel is selected
+const pdfBtn = document.getElementById("pdfBtn");
 
-  function getVal(cpu, key){
-    if (!cpu) return "";
-    if (key === "Segment") return cpu.segment || "";
-    if (key === "Platform") return cpu.platform || "";
-    if (key === "Generation") return cpu.generation || "";
-    if (key === "Model") return cpu.model || "";
-    return (cpu.specs && cpu.specs[key]) ? cpu.specs[key] : "";
-  }
+// Parameter order for table rows
+const PARAM_ORDER = ["Segment", "Platform", "Generation", "Model", ...(DATA.paramOrder || [])];
 
-  // If Intel has no explicit AMD recommendation, fall back to AMDs in same block AND same segment
-  function getAmdIdsForIntel(intelId){
-    let amdIds = (DATA.recommendations && Array.isArray(DATA.recommendations[intelId]))
-      ? DATA.recommendations[intelId]
-      : [];
+// -------- Helpers --------
+function escapeHtml(s){
+  return String(s ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
 
-    if (!amdIds || amdIds.length === 0){
-      const intel = cpuById[intelId];
-      if (intel && typeof intel.block === "number"){
-        amdIds = DATA.cpus
-          .filter(c => c.vendor === "AMD" && c.block === intel.block && c.segment === intel.segment)
-          .map(c => c.id);
-      }
+function getVal(cpu, key){
+  if (!cpu) return "";
+  if (key === "Segment") return cpu.segment || "";
+  if (key === "Platform") return cpu.platform || "";
+  if (key === "Generation") return cpu.generation || "";
+  if (key === "Model") return cpu.model || "";
+  return (cpu.specs && cpu.specs[key]) ? cpu.specs[key] : "";
+}
+
+function updatePdfButtonVisibility(){
+  if (!pdfBtn) return; // in case you forgot to add it
+  pdfBtn.style.display = intelSelect.value ? "inline-block" : "none";
+}
+
+// If Intel has no explicit AMD recommendation, fall back to AMDs in same block AND same segment
+function getAmdIdsForIntel(intelId){
+  let amdIds = (DATA.recommendations && Array.isArray(DATA.recommendations[intelId]))
+    ? DATA.recommendations[intelId]
+    : [];
+
+  if (!amdIds || amdIds.length === 0){
+    const intel = cpuById[intelId];
+    if (intel && typeof intel.block === "number"){
+      amdIds = DATA.cpus
+        .filter(c => c.vendor === "AMD" && c.block === intel.block && c.segment === intel.segment)
+        .map(c => c.id);
     }
-    return Array.from(new Set((amdIds || []).filter(Boolean)));
   }
 
-  function getFilteredIntelList(){
-    const seg = (segmentSelect.value || "All").trim().toLowerCase();
+  return Array.from(new Set((amdIds || []).filter(Boolean)));
+}
 
-    return DATA.cpus
-      .filter(c => (c.vendor || "").trim().toLowerCase() === "intel" && c.model)
-      .filter(c => seg === "all" || (c.segment || "").trim().toLowerCase() === seg)
-      .slice()
-      .sort((a,b) =>
-        (a.generation || "").localeCompare(b.generation || "") ||
-        (a.model || "").localeCompare(b.model || "")
-      );
+// Filter Intel list by selected segment
+function getFilteredIntelList(){
+  const seg = (segmentSelect.value || "All").trim().toLowerCase();
+
+  return DATA.cpus
+    .filter(c => (c.vendor || "").trim().toLowerCase() === "intel" && c.model)
+    .filter(c => seg === "all" || (c.segment || "").trim().toLowerCase() === seg)
+    .slice()
+    .sort((a,b) =>
+      (a.generation || "").localeCompare(b.generation || "") ||
+      (a.model || "").localeCompare(b.model || "")
+    );
+}
+
+/**
+ * Populate Intel dropdown when segment changes
+ * ✅ Does NOT auto-render comparison
+ * ✅ Resets selection to placeholder
+ * ✅ Hides PDF button
+ */
+function populateIntelDropdown(){
+  const list = getFilteredIntelList();
+
+  intelSelect.innerHTML = "";
+
+  // Placeholder (forces manual user selection)
+  const placeholder = document.createElement("option");
+  placeholder.value = "";
+  placeholder.textContent = "-- Select Intel Processor --";
+  placeholder.disabled = true;
+  placeholder.selected = true;
+  intelSelect.appendChild(placeholder);
+
+  // De-duplicate identical labels
+  const labelCounter = {};
+  list.forEach(cpu => {
+    const baseLabel = `${cpu.model} (${cpu.generation || "Unknown"})`;
+    labelCounter[baseLabel] = (labelCounter[baseLabel] || 0) + 1;
+
+    const label = labelCounter[baseLabel] > 1
+      ? `${baseLabel} – Variant ${labelCounter[baseLabel]}`
+      : baseLabel;
+
+    const opt = document.createElement("option");
+    opt.value = cpu.id;
+    opt.textContent = label;
+    intelSelect.appendChild(opt);
+  });
+
+
+  // Clear comparison area until user selects CPU
+  amdMeta.textContent = "";
+  thead.innerHTML = "";
+  tbody.innerHTML = "";
+
+  updatePdfButtonVisibility(); // hide button
+}
+
+/**
+ * Render comparison only AFTER user selects Intel CPU
+ * ✅ Shows PDF button only after selection
+ */
+function renderSelected(){
+  updatePdfButtonVisibility();
+
+  // user hasn't selected anything yet
+  if (!intelSelect.value){
+    amdMeta.textContent = "Select an Intel processor to view comparison.";
+    thead.innerHTML = "";
+    tbody.innerHTML = "";
+    return;
   }
 
-  function populateIntelDropdown(){
-    const list = getFilteredIntelList();
-    intelSelect.innerHTML = "";
-
-    const labelCounter = {};
-    list.forEach(cpu => {
-      const baseLabel = `${cpu.model} (${cpu.generation || "Unknown"})`;
-      labelCounter[baseLabel] = (labelCounter[baseLabel] || 0) + 1;
-
-      const label = labelCounter[baseLabel] > 1
-        ? `${baseLabel} – Variant ${labelCounter[baseLabel]}`
-        : baseLabel;
-
-      const opt = document.createElement("option");
-      opt.value = cpu.id;
-      opt.textContent = label;
-      intelSelect.appendChild(opt);
-    });
-
-
-    console.log("Segment selected:", segmentSelect.value, "| Intel Found:", list.length);
-
-    if (list.length) intelSelect.selectedIndex = 0;
-    renderSelected();
+  const intel = cpuById[intelSelect.value];
+  if (!intel){
+    amdMeta.textContent = "No Intel processor available for this segment.";
+    thead.innerHTML = "";
+    tbody.innerHTML = "";
+    return;
   }
 
-  function renderSelected(){
-    const intel = cpuById[intelSelect.value];
+  const amdIds = getAmdIdsForIntel(intelSelect.value);
+  const amds   = amdIds.map(id => cpuById[id]).filter(Boolean);
+  const cols = [intel, ...amds];
 
-    if (!intel){
-      thead.innerHTML = "";
-      tbody.innerHTML = "";
-      amdMeta.textContent = "No Intel processor available for this segment.";
-      return;
-    }
+  
+ 
 
-    const amdIds = getAmdIdsForIntel(intelSelect.value);
-    const amds = amdIds.map(id => cpuById[id]).filter(Boolean);
-    const cols = [intel, ...amds];
+  // Table header
+  thead.innerHTML =
+    `<tr><th>Specification</th>` +
+    cols.map(c => {
+      const cls = c.vendor === "Intel" ? "intel" : "amd";
+      return `<th class="${cls}">${escapeHtml(c.vendor)} — ${escapeHtml(c.model || "")}</th>`;
+    }).join("") +
+    `</tr>`;
 
-    amdMeta.textContent = amds.length
-      ? `Recommended AMD: ${amds.map(a => a.model).join(", ")}`
-      : "No AMD mapping found.";
+  // Table body
+  let rows = "";
+  PARAM_ORDER.forEach(p => {
+    const vals = cols.map(c => getVal(c, p));
+    const any  = vals.some(v => String(v).trim() !== "");
+    if (!any) return;
 
-    thead.innerHTML =
-      `<tr><th>Specification</th>` +
-      cols.map(c => {
-        const cls = c.vendor === "Intel" ? "intel" : "amd";
-        return `<th class="${cls}">${escapeHtml(c.vendor)} — ${escapeHtml(c.model || "")}</th>`;
-      }).join("") +
+    rows +=
+      `<tr><td><b>${escapeHtml(p)}</b></td>` +
+      vals.map(v => `<td class="nowrap">${escapeHtml(v || "-")}</td>`).join("") +
       `</tr>`;
+  });
 
-    let rows = "";
-    PARAM_ORDER.forEach(p => {
-      const vals = cols.map(c => getVal(c, p));
-      const any = vals.some(v => String(v).trim() !== "");
-      if (!any) return;
+  tbody.innerHTML = rows;
 
-      rows +=
-        `<tr><td><b>${escapeHtml(p)}</b></td>` +
-        vals.map(v => `<td class="nowrap">${escapeHtml(v || "-")}</td>`).join("") +
-        `</tr>`;
-    });
+  updatePdfButtonVisibility(); // show now that selection exists
+}
 
-    tbody.innerHTML = rows;
+// ---------- PDF EXPORT (TEXT TABLE, NOT IMAGE) ----------
+function buildSelectedTableForPdf(){
+  const intel = cpuById[intelSelect.value];
+  const amdIds = getAmdIdsForIntel(intelSelect.value);
+  const amds = amdIds.map(id => cpuById[id]).filter(Boolean);
+  const cols = [intel, ...amds];
+
+  const head = ["Specification", ...cols.map(c => `${c.vendor} — ${c.model}`)];
+  const body = [];
+
+  PARAM_ORDER.forEach(p => {
+    const row = [p, ...cols.map(c => getVal(c, p) || "-")];
+    if (row.slice(1).some(v => String(v).trim() !== "-" && String(v).trim() !== "")){
+      body.push(row);
+    }
+  });
+
+  return { head, body, intel, amds };
+}
+
+function downloadSelectedPdf(){
+  // stop if user hasn't selected CPU
+  if (!intelSelect.value){
+    alert("Please select an Intel processor first.");
+    return;
   }
 
-  // events + init
-  segmentSelect.addEventListener("change", populateIntelDropdown);
-  intelSelect.addEventListener("change", renderSelected);
-  populateIntelDropdown();
+  if (!window.jspdf || !window.jspdf.jsPDF){
+    alert("jsPDF failed to load. Please check internet/CDN access.");
+    return;
+  }
+
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation: "p", unit: "pt", format: "a4" });
+
+  const { head, body, intel, amds } = buildSelectedTableForPdf();
+
+  doc.setFontSize(14);
+  doc.text("Processor Comparison", 40, 40);
+
+  doc.setFontSize(10);
+  
+
+  if (amds.length){
+      }
+
+  doc.autoTable({
+    startY: amds.length ? 104 : 92,
+    head: [head],
+    body,
+    theme: "grid",
+    styles: { fontSize: 9, cellPadding: 4, overflow: "linebreak" },
+    headStyles: { fillColor: [37, 99, 235] },
+    columnStyles: { 0: { cellWidth: 170 } }
+  });
+
+  const safe = (s) => String(s || "").replace(/[^a-z0-9\-_\.]+/gi, "_").slice(0, 80);
+  const fname = `${safe(intel.model)}_vs_${safe(amds.map(a => a.model).join("_") || "no_amd")}.pdf`;
+  doc.save(fname);
+}
+
+// expose to button onclick
+window.downloadSelectedPdf = downloadSelectedPdf;
+
+// -------------------- EVENTS + INIT --------------------
+segmentSelect.addEventListener("change", populateIntelDropdown);
+intelSelect.addEventListener("change", renderSelected);
+
+// Initial: fill dropdown only (no comparison) + hide PDF button
+populateIntelDropdown();
+updatePdfButtonVisibility();
 </script>
